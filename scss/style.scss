@@ -1,0 +1,170 @@
+@import "fonts.scss";
+//nullStyle
+body, html {margin: 0; padding: 0;}
+
+%titleStyle {
+	font-family: "Young Serif", sans-serif;
+	font-weight: 400;
+	font-size: 1.75em;
+	color: hsl(14, 45%, 36%);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: hsl(30, 54%, 90%);
+}
+
+main {
+	max-height: 90vh;
+}
+
+.omlette {
+	max-width: 736px;
+	font-family: "Outfit", sans-serif;
+	color: hwb(32 31% 63%);
+	&__container {
+		padding: 40px 40px 30px 40px;
+		border-radius: 20px;
+		background-color: hsl(0, 0%, 100%);
+		}
+		h1 {
+			font-family: "Young Serif", sans-serif;
+			font-size: 2.41em;
+			letter-spacing: 0.8px;
+			color: hsl(24, 5%, 18%);
+			margin-bottom: 15px;
+		}
+		&__picture {
+			img {
+				border-radius: 10px;
+				max-width: 100%;
+			}
+		}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 140%;
+	}
+}
+
+
+.time {
+	margin: 34px 0px 27px 0px;
+	&__container {
+		border-radius: 10px;
+		background-color: hsl(330, 100%, 98%);
+		padding: 7px 0px 0px 28px;
+	}
+
+	&__title {
+		font-size: 1.24em;
+		color: hsl(332, 51%, 32%);
+	}
+	&__list {
+		font-size: 1em;
+		padding: 0px 0px 18px 25px;
+		li {
+			margin-bottom: 12px;
+			padding-left: 15px;
+		}
+		li::marker {
+			color: hsl(332, 51%, 32%);
+		}
+	}
+}
+.ingredients {
+	position: relative;
+	padding-bottom: 17px;
+	margin-bottom: 29px;
+	&__title {
+		@extend %titleStyle;
+		margin-bottom: 20px;
+	}
+
+	&__list {
+		padding-left: 24px;
+		li {
+			padding-left: 16px;
+			margin-bottom: 12px;
+		}
+		li::marker {
+			color: hsl(14, 45%, 36%);
+		}
+	}
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.5px;
+		background-color: hsl(30, 10%, 34%);
+	}
+}
+.instructions {
+	position: relative;
+	padding-bottom: 16px;
+	margin-bottom: 28px;
+	&__title {
+		@extend %titleStyle;
+		margin-bottom: 19px;
+	}
+	&__list {
+		font-size: 16px;
+		padding-left: 24px;
+		li {
+			line-height: 142%;
+			padding-left: 16px;
+			margin-bottom: 10px;
+		}
+		li::marker {
+			font-family: "Outfit", sans-serif;
+			font-weight: 700;
+			color: hsl(14, 45%, 36%);
+		}
+	}
+	&::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.5px;
+		background-color: hwb(32 31% 63%);
+	}
+}
+.nutrition {
+
+	&__title {
+		@extend %titleStyle;
+		margin-bottom: 20px;
+	}
+	table {
+		font-family: "Outfit", sans-serif;
+		font-weight: 600;
+		border-collapse: collapse;
+		width: 100%;
+		tr {
+			border-bottom: 1px solid hsl(30, 10%, 34%);
+			td {
+				padding: 12px 0px 15px 0px;
+			}
+			td:nth-child(1) {
+				padding-left: 32px
+			}
+			td:nth-child(2) {
+				font-weight: 700;
+				padding-right: 32px;
+				color: hsl(14, 45%, 36%);
+			}
+			&:last-child {
+				border: none;
+			}
+		}
+
+	}
+}
